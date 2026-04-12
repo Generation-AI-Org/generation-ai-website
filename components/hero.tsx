@@ -47,12 +47,20 @@ export function Hero() {
 
         {/* CTAs */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <button className="group relative px-8 py-4 bg-accent text-text-on-accent rounded-full font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_var(--accent-glow)]">
+          <a
+            href="https://community.generation-ai.org"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group relative px-8 py-4 bg-accent text-text-on-accent rounded-full font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_var(--accent-glow)]"
+          >
             <span className="relative z-10">Kostenlos beitreten</span>
-          </button>
-          <button className="px-8 py-4 border border-border text-text rounded-full font-medium text-lg transition-all duration-300 hover:bg-bg-elevated hover:border-text-muted">
+          </a>
+          <a
+            href="#features"
+            className="px-8 py-4 border border-border text-text rounded-full font-medium text-lg transition-all duration-300 hover:bg-bg-elevated hover:border-text-muted"
+          >
             Mehr erfahren
-          </button>
+          </a>
         </div>
 
         {/* Social Proof */}

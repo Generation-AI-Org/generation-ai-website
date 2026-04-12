@@ -6,8 +6,8 @@
 
 | Phase | Name | Goal | Status |
 |-------|------|------|--------|
-| 1 | Project Setup | Next.js Projekt mit Design System | in_progress |
-| 2 | Landing Page | Hero + Sections statisch | pending |
+| 1 | Project Setup | Next.js Projekt mit Design System | ✅ done |
+| 2 | Landing Page | Hero + Sections statisch | in_progress |
 | 3 | Sign-up Flow | Fragebogen + Formular | pending |
 | 4 | Auth Backend | Supabase + Circle Integration | pending |
 | 5 | Polish & Launch | Performance, Testing, Deploy | pending |

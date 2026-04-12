@@ -4,61 +4,65 @@
 
 ## Current Status
 
-**Phase:** 1 — Project Setup
-**Current Plan:** 01-02-PLAN.md (shadcn/ui + Layout + Logos)
-**Current Wave:** 2 (von 3)
+**Phase:** 1 → 2 Transition
 **Milestone:** v1.0 Launch
-**Last Updated:** 2026-04-12T17:15
+**Last Updated:** 2026-04-12T22:30
 
 ## Progress
 
 ```
-Phase 1: [###------] 1/3 plans complete
-Wave 1:  ✅ Done
-Wave 2:  ⏳ Next (Checkpoint — Browser-Test)
-Wave 3:  ⏸️ Pending (Vercel Deploy)
+Phase 1: [#########] ✅ Complete (+ Bonus: Terminal Splash, SignalGrid)
+Phase 2: [#--------] In Progress (Hero done, Sections pending)
 ```
 
 ## What's Done
 
-- [x] PROJECT.md erstellt
-- [x] REQUIREMENTS.md erstellt
-- [x] ROADMAP.md erstellt (5 Phasen)
-- [x] config.json erstellt
-- [x] Phase 1 geplant (3 Plans, 3 Waves)
-- [x] **01-01-PLAN.md** ✅ — Next.js 16 + Tailwind v4 + Farbwelt + Fonts (3 tasks, 4m 13s)
-  - pnpm installiert, Next.js 16 Projekt erstellt
-  - Tailwind v4 mit @theme CSS Config
-  - Inter Font + cn() Helper
-  - Placeholder Homepage mit Color Test Section
+### Phase 1: Project Setup ✅
+- [x] Next.js 16 + React 19 + Tailwind v4
+- [x] shadcn/ui Basis-Infrastruktur
+- [x] Generation AI Farbwelt (Dark: Blue/Neon, Light: Pink/Red)
+- [x] Header + Footer Komponenten
+- [x] GitHub Repo: luca-schweigmann/generation-ai-website
+- [x] Vercel Deploy: website-indol-eight-13.vercel.app
+- [x] Domain DNS konfiguriert: generation-ai.org
+
+### Bonus (nicht geplant, aber gebaut):
+- [x] **Terminal Splash** — Typing Animation, Sound Effects (Web Audio API), schwebendes Logo
+- [x] **SignalGrid Background** — Canvas-basierter interaktiver Hintergrund mit Mouse-Tracking
+- [x] **Hero Section** — Badge, Headline, CTAs, Social Proof Platzhalter
+
+### Phase 2: Landing Page (in progress)
+- [x] Hero Section (mit SignalGrid)
+- [ ] Buttons verlinken (CTAs gehen ins Leere)
+- [ ] Logo angleichen (Header: JPG, Footer: SVG)
+- [ ] "Was wir bieten" Section
+- [ ] "Für wen" Section
+- [ ] CTA Section
+- [ ] Mobile Responsive Check
 
 ## Key Decisions Made
 
-1. **Auth-Architektur:** "Soft SSO" — Supabase Auth + Circle API, gleiche Email = gleiche Identity, aber separate Sessions
-2. **Flow:** Landing Page → Fragebogen → Circle Magic Link → Community
-3. **Circle ist das Zentrum:** tools-app ist Add-on, erreichbar aus Circle
-4. **21st.dev Components:** Aurora/Shape Hero, Rotating Text, Animated Cards, Lamp CTA
-5. **Fragebogen:** 4-5 Fragen auf Landing Page (Gatekeeping + Daten sammeln)
-6. **Sign-up Result:** Success Page ("Check deine Emails"), kein Login-Button für existierende User
-7. **Tailwind v4:** CSS-basierte @theme Config statt tailwind.config.js
-8. **No src/:** Root-level app/ für shadcn Kompatibilität
+1. **Terminal Splash:** Aceternity-Style Audio Sprites, skipIfSeen für Returning Users
+2. **Background:** SignalGrid statt statischem Gradient — organisches, interaktives Gefühl
+3. **Design System:** CSS Variables für Theme-Switching, @layer utilities für Tailwind v4
+4. **Auth-Architektur:** "Soft SSO" — Supabase Auth + Circle API
+5. **Flow:** Landing Page → Fragebogen → Circle Magic Link → Community
 
-## Open Blockers
+## Open Items
 
-- [ ] Circle API Token erstellen
-- [ ] Domain DNS konfigurieren
-- [ ] Design Assets (Logo, Illustrationen)
+- [ ] Logo im Header auf SVG umstellen (wie Footer)
+- [ ] Hero CTAs verlinken (Beitreten → Circle, Mehr erfahren → Scroll)
+- [ ] Social Proof: Echte Avatare oder entfernen
+- [ ] Circle API Token erstellen (für Phase 4)
 
 ## Next Steps
 
-1. `/gsd-execute-phase 1` — Wave 2 ausführen (shadcn/ui + Layout + Logos)
-2. Browser-Test: `pnpm dev` → localhost:3000 checken
-3. Wave 3: GitHub Repo + Vercel Deploy
+1. Quick Fixes: Logo + Buttons
+2. `/gsd-plan-phase 2` — Landing Page Sections planen
+3. Sections bauen: Features, Für wen, CTA
 
 ## Context für neue Sessions
 
-Das Website-Projekt ist ein Unterprojekt von Generation AI. Die Haupt-App ist `tools-app/` (KI-Tool-Bibliothek). Diese Website ist die öffentliche Landing Page die Leute zur Circle Community (community.generation-ai.org) bringt.
-
-**Tech Stack:** Next.js 15, React 19, Tailwind, Supabase Auth, Circle API, Vercel
-
-**Design:** Farbwelt A (Blue #3A3AFF + Neon #CEFF32), siehe `../v1-web-app/Design.md`
+Website für Generation AI (Student KI Community). Tech: Next.js 16, Tailwind v4, Vercel.
+Besonderheit: Terminal Splash Intro + interaktiver SignalGrid Background.
+Ziel: Leute zur Circle Community (community.generation-ai.org) bringen.

@@ -14,11 +14,14 @@ export function Header() {
           {/* Logo - switches based on theme */}
           <Link href="/" className="flex items-center">
             <Image
-              src={theme === 'dark' ? '/logo-blue-neon-new.jpg' : '/logo-pink-red.jpg'}
+              src={theme === 'dark'
+                ? '/logos/generationai-weiss-transparent-wide.svg'
+                : '/logos/generationai-pink-rot-wide.svg'
+              }
               alt="Generation AI"
               width={150}
-              height={50}
-              className="h-9 md:h-11 w-auto object-contain hover:opacity-90 transition-opacity"
+              height={40}
+              className="h-8 md:h-10 w-auto hover:opacity-90 transition-opacity"
               priority
               key={theme}
             />
