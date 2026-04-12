@@ -1,10 +1,23 @@
-import type { Metadata } from "next";
-import { inter } from "@/lib/fonts";
+import type { Metadata, Viewport } from "next";
+import { Inter } from "next/font/google";
+import { GeistMono } from "geist/font/mono";
 import "./globals.css";
-import { Geist } from "next/font/google";
-import { cn } from "@/lib/utils";
+import { ThemeProvider } from "@/components/ThemeProvider";
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: [
+    { media: "(prefers-color-scheme: dark)", color: "#141414" },
+    { media: "(prefers-color-scheme: light)", color: "#FAF7F8" },
+  ],
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://generation-ai.org"),
@@ -27,9 +40,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="de" className={cn("font-sans", geist.variable)}>
-      <body className="bg-black-brand text-gray-light antialiased min-h-screen">
-        {children}
+    <html lang="de" className={`${inter.variable} ${GeistMono.variable}`}>
+      <body className="antialiased min-h-screen">
+        <ThemeProvider>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
