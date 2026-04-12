@@ -74,17 +74,25 @@
 - [ ] Error Handling
 
 **Backend:**
-- [ ] Supabase `profiles` Tabelle erstellen
+- [ ] Supabase `profiles` Tabelle erstellen (Schema siehe Auth-Architecture.md)
+- [ ] Supabase Client mit Cookie-Domain `.generation-ai.org` konfigurieren
 - [ ] API Route `/api/auth/signup`:
-  - Supabase User erstellen
-  - Profil + Antworten speichern
-  - Circle Member via API erstellen
+  - Supabase User erstellen (Magic Link)
+  - Profil + Fragebogen-Antworten speichern
+  - Circle Member via Admin API erstellen
 - [ ] Circle API Integration
-- [ ] Cookie-Domain für Session-Sharing
+- [ ] RLS Policies für profiles Tabelle
+
+**Koordination mit tools-app:**
+- tools-app Phase 4 (Auth Layer) ist FERTIG
+- tools-app liest Sessions die wir erstellen
+- Gleiche Supabase-Instanz, gleiche Cookie-Domain
+- Siehe: `../Decisions/Auth-Architecture.md`
 
 **Abhängigkeiten:**
-- Circle API Token (Admin API)
-- Supabase Projekt (existiert bereits)
+- [ ] Circle API Token (Admin API) — Luca muss erstellen
+- [x] Supabase Projekt (existiert)
+- [x] Domain DNS konfiguriert
 
 ---
 
