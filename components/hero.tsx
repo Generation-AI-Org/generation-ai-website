@@ -1,16 +1,24 @@
 'use client'
 
-import { DotGridGlow } from "@/components/ui/dot-grid-glow";
+import { SignalGrid } from "@/components/ui/signal-grid";
 
 export function Hero() {
   return (
     <section className="relative min-h-[90vh] flex flex-col items-center justify-center px-4 text-center overflow-hidden">
-      {/* Calm Dot Grid with Mouse Glow */}
+      {/* Signal Grid - connections propagate outward */}
       <div className="absolute inset-0 bg-bg">
-        <DotGridGlow
-          gap={24}
-          dotSize={1}
-          glowRadius={100}
+        <SignalGrid
+          gridSpacing={30}
+          dotSize={1.5}
+          dotOpacity={0.35}
+          signalHops={2}
+        />
+        {/* Fade overlay - less visible in center where text is */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background: 'radial-gradient(ellipse 80% 60% at 50% 45%, var(--bg) 0%, transparent 70%)',
+          }}
         />
       </div>
 

@@ -41,6 +41,7 @@ Eine Marketing-Website die Generation AI vorstellt und Studierende zur Community
 - Backend erstellt Circle-Member via Admin API
 - Circle sendet Magic Link für Community-Zugang
 - Gleiche Email = gleiche Identity (tools-app + Circle)
+- **Zentrale Doku:** `../Decisions/Auth-Architecture.md`
 
 **Deferred:**
 - Blog/Content-Bereich
