@@ -4,9 +4,17 @@
 
 ## Current Status
 
-**Phase:** Pre-Phase 1 (Planning complete)
+**Phase:** 1 — Project Setup
+**Current Plan:** 01-02-PLAN.md (shadcn/ui + Layout)
 **Milestone:** v1.0 Launch
 **Last Updated:** 2026-04-12
+
+## Progress
+
+```
+Phase 1: [#--------] 1/3 plans
+Overall:  [#--------] 1/15 plans (estimate)
+```
 
 ## What's Done
 
@@ -14,6 +22,7 @@
 - [x] REQUIREMENTS.md erstellt
 - [x] ROADMAP.md erstellt (5 Phasen)
 - [x] config.json erstellt (YOLO mode, quality profile)
+- [x] **01-01-PLAN.md** — Next.js 16 + Tailwind v4 + Farbwelt (3 tasks, 4m 13s)
 
 ## Key Decisions Made
 
@@ -23,6 +32,8 @@
 4. **21st.dev Components:** Aurora/Shape Hero, Rotating Text, Animated Cards, Lamp CTA
 5. **Fragebogen:** 4-5 Fragen auf Landing Page (Gatekeeping + Daten sammeln)
 6. **Sign-up Result:** Success Page ("Check deine Emails"), kein Login-Button für existierende User
+7. **Tailwind v4:** CSS-basierte @theme Config statt tailwind.config.js
+8. **No src/:** Root-level app/ für shadcn Kompatibilität
 
 ## Open Blockers
 

@@ -23,17 +23,17 @@
 **Plans:** 3 plans
 
 Plans:
-- [ ] 01-01-PLAN.md — Next.js 16 + Tailwind v4 + Generation AI Farbwelt
+- [x] 01-01-PLAN.md — Next.js 16 + Tailwind v4 + Generation AI Farbwelt (DONE)
 - [ ] 01-02-PLAN.md — shadcn/ui + Layout-Struktur + Logo Assets
 - [ ] 01-03-PLAN.md — GitHub + Vercel Deployment
 
 **Deliverables:**
-- [ ] Next.js 16 + React 19 Projekt erstellen
-- [ ] Tailwind CSS mit Generation AI Farbwelt A konfigurieren
+- [x] Next.js 16 + React 19 Projekt erstellen
+- [x] Tailwind CSS mit Generation AI Farbwelt A konfigurieren
 - [ ] shadcn/ui Basis-Infrastruktur (fuer 21st.dev)
 - [ ] Vercel Projekt anlegen
 - [ ] Basis-Layout (Header/Footer Struktur)
-- [ ] Font Setup (Inter via next/font)
+- [x] Font Setup (Inter via next/font)
 
 **Success Criteria:**
 - `pnpm dev` laeuft ohne Fehler
