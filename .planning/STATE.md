@@ -5,8 +5,9 @@
 ## Current Status
 
 **Phase:** 2 — Landing Content
+**Current Plan:** 02-01-PLAN.md (Features + Für wen)
 **Milestone:** v1.0 Launch (Anfang Mai 2026)
-**Last Updated:** 2026-04-12T23:00
+**Last Updated:** 2026-04-12T23:15
 
 ## Progress
 
