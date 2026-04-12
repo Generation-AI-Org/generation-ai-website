@@ -4,6 +4,8 @@ import { useState } from 'react'
 import { Header } from "@/components/layout/header"
 import { Footer } from "@/components/layout/footer"
 import { Hero } from "@/components/hero"
+import { Features } from "@/components/sections/features"
+import { TargetAudience } from "@/components/sections/target-audience"
 import { TerminalSplash } from "@/components/terminal-splash"
 
 export function HomeClient() {
@@ -32,6 +34,8 @@ export function HomeClient() {
         <Header />
         <main className="min-h-screen pt-16">
           <Hero />
+          <Features />
+          <TargetAudience />
         </main>
         <Footer />
       </div>
