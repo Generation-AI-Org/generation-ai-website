@@ -35,7 +35,7 @@ export function SignalGrid({
   const pointsRef = useRef<GridPoint[][]>([])
   const mouseRef = useRef({ x: -1000, y: -1000 })
   const lastMouseCell = useRef({ col: -1, row: -1 })
-  const animationRef = useRef<number>()
+  const animationRef = useRef<number | undefined>(undefined)
 
   const initGrid = useCallback((width: number, height: number) => {
     const cols = Math.ceil(width / gridSpacing) + 1

@@ -28,7 +28,7 @@ export function NetworkGrid({
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const mouseRef = useRef({ x: -1000, y: -1000 })
   const timeRef = useRef(0)
-  const animationRef = useRef<number>()
+  const animationRef = useRef<number | undefined>(undefined)
 
   const draw = useCallback(() => {
     const canvas = canvasRef.current
