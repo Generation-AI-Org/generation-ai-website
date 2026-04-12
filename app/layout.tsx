@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { inter } from "@/lib/fonts";
 import "./globals.css";
+import { Geist } from "next/font/google";
+import { cn } from "@/lib/utils";
+
+const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://generation-ai.org"),
@@ -23,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="de" className={inter.variable}>
+    <html lang="de" className={cn("font-sans", geist.variable)}>
       <body className="bg-black-brand text-gray-light antialiased min-h-screen">
         {children}
       </body>
