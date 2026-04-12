@@ -1,168 +1,129 @@
 # Roadmap — Generation AI Website
 
-> v1.0 Launch: Landing Page + Sign-up Flow
+> v1.0 Launch: Anfang Mai 2026
 
 ## Milestone Overview
 
 | Phase | Name | Goal | Status |
 |-------|------|------|--------|
-| 1 | Project Setup | Next.js Projekt mit Design System | ✅ done |
-| 2 | Landing Page | Hero + Sections statisch | in_progress |
-| 3 | Sign-up Flow | Fragebogen + Formular | pending |
-| 4 | Auth Backend | Supabase + Circle Integration | pending |
-| 5 | Polish & Launch | Performance, Testing, Deploy | pending |
+| 1 | Project Setup | Next.js + Design System + Deploy | ✅ done |
+| 2 | Landing Content | "Was wir bieten" + "Für wen" Sections | pending |
+| 3 | Sign-up Flow | Fragebogen + Auth (Supabase + Circle) | pending |
+| 4 | Polish & Launch | Mobile, Performance, Final QA | pending |
+
+**Timeline:** ~2-3 Wochen bis Launch
 
 ---
 
-## Phase 1: Project Setup
+## Phase 1: Project Setup ✅
 
-**Goal:** Funktionierendes Next.js Projekt mit Design System und 21st.dev ready.
+**Status:** Done
 
-**Requirements:** LP-04, DS-01, DS-03
-
-**Plans:** 3 plans
-
-Plans:
-- [x] 01-01-PLAN.md — Next.js 16 + Tailwind v4 + Generation AI Farbwelt (DONE)
-- [ ] 01-02-PLAN.md — shadcn/ui + Layout-Struktur + Logo Assets
-- [ ] 01-03-PLAN.md — GitHub + Vercel Deployment
-
-**Deliverables:**
-- [x] Next.js 16 + React 19 Projekt erstellen
-- [x] Tailwind CSS mit Generation AI Farbwelt A konfigurieren
-- [ ] shadcn/ui Basis-Infrastruktur (fuer 21st.dev)
-- [ ] Vercel Projekt anlegen
-- [ ] Basis-Layout (Header/Footer Struktur)
-- [x] Font Setup (Inter via next/font)
-
-**Success Criteria:**
-- `pnpm dev` laeuft ohne Fehler
-- Tailwind Farben (blue-brand, neon, etc.) funktionieren
-- Vercel Preview Deploy funktioniert
+**Was gebaut wurde:**
+- [x] Next.js 16 + React 19 + Tailwind v4
+- [x] Generation AI Farbwelt (Dark/Light Mode)
+- [x] Terminal Splash (Typing, Sound, schwebendes Logo)
+- [x] Hero Section mit SignalGrid Background
+- [x] Header + Footer
+- [x] Vercel Deploy + Domain DNS
 
 ---
 
-## Phase 2: Landing Page
+## Phase 2: Landing Content
 
-**Goal:** Statische Landing Page mit allen Sections, responsive, performant.
+**Goal:** Statische Content-Sections die erklären was Generation AI bietet.
 
-**Requirements:** LP-01, LP-02, LP-03, LP-04, LP-05, DS-02
+**Sections:**
+
+### 2.1 "Was wir bieten"
+- 3-4 Feature Cards:
+  - KI-Tool-Bibliothek (tools-app)
+  - Community (Circle - Austausch, Fragen)
+  - Kurse & Guides (kommt)
+  - Events (Webinare, Workshops, Guest Speaker - kommt)
+- Icons oder Illustrationen
+- Responsive Grid
+
+### 2.2 "Für wen"
+- Zielgruppe: Studierende im DACH-Raum
+- Kurze Value Proposition
+- Evtl. 2-3 Use Cases / Personas
 
 **Deliverables:**
-- [ ] Hero Section mit 21st.dev Component (Aurora/Shape)
-- [ ] Animierte Headline (Rotating Text)
-- [ ] "Was wir bieten" Section mit Feature Cards
-- [ ] "Fuer wen" Section
-- [ ] CTA Section (Platzhalter fuer Sign-up)
+- [ ] Features Section Component
+- [ ] "Für wen" Section Component
 - [ ] Mobile Responsive
-- [ ] Lighthouse Score > 90
-
-**Success Criteria:**
-- Alle Sections sichtbar und responsive
-- Animationen smooth (60fps)
-- Core Web Vitals gruen
+- [ ] Scroll-Anchor für "Mehr erfahren" Button
 
 ---
 
 ## Phase 3: Sign-up Flow
 
-**Goal:** Funktionierender Fragebogen mit Multi-Step UX.
+**Goal:** Funktionierender Fragebogen mit Auth-Integration.
 
-**Requirements:** SU-01, SU-02, SU-03, SU-04
+**UI Components:**
+- [ ] Sign-up Section Layout
+- [ ] Fragebogen UI:
+  - Was studierst du? (Dropdown/Chips)
+  - Welche Hochschule? (Dropdown mit Suche)
+  - **"Test Yourself" KI-Level 1-5** (Slider oder Chips)
+  - Interessen (Multi-Select Chips)
+- [ ] Email Input + Submit Button
+- [ ] Loading State
+- [ ] Success State ("Check deine Emails")
+- [ ] Error Handling
 
-**Deliverables:**
-- [ ] Email-Input mit Validierung
-- [ ] Fragebogen-UI (4-5 Fragen)
-  - Single-Select Chips
-  - Multi-Select Chips
-  - Dropdown fuer Hochschule
-- [ ] Form State Management (React Hook Form oder aehnlich)
-- [ ] Success Page nach Submit
-- [ ] Gatekeeping-Logik (Studierende vs. andere)
-- [ ] Loading States & Error Handling
-
-**Success Criteria:**
-- User kann alle Fragen beantworten
-- Validierung funktioniert
-- Success Page erscheint nach Submit
-- Mobile-friendly
-
----
-
-## Phase 4: Auth Backend
-
-**Goal:** Supabase Auth + Circle API Integration funktioniert.
-
-**Requirements:** AU-01, AU-02, AU-03, AU-04
-
-**Deliverables:**
-- [ ] Supabase Auth Setup (Magic Link)
-- [ ] User-Profil Tabelle in Supabase
-- [ ] API Route: Sign-up Handler
+**Backend:**
+- [ ] Supabase `profiles` Tabelle erstellen
+- [ ] API Route `/api/auth/signup`:
   - Supabase User erstellen
   - Profil + Antworten speichern
-  - Circle Member erstellen via API
+  - Circle Member via API erstellen
 - [ ] Circle API Integration
-  - Admin API Token einrichten
-  - Member erstellen mit Profile Fields
-- [ ] Error Handling (API failures, duplicates)
-- [ ] Email Templates (optional: Custom Supabase Template)
+- [ ] Cookie-Domain für Session-Sharing
 
-**Success Criteria:**
-- Sign-up erstellt User in Supabase
-- Circle Member wird automatisch erstellt
-- Circle sendet Magic Link
-- Daten in beiden Systemen konsistent
+**Abhängigkeiten:**
+- Circle API Token (Admin API)
+- Supabase Projekt (existiert bereits)
 
 ---
 
-## Phase 5: Polish & Launch
+## Phase 4: Polish & Launch
 
-**Goal:** Production-ready, getestet, deployed.
+**Goal:** Production-ready, getestet, live.
 
-**Requirements:** LP-05, DS-04
-
-**Deliverables:**
-- [ ] Performance Optimierung
-  - Image Optimization
-  - Bundle Size Check
-  - Lazy Loading
-- [ ] Accessibility Audit
-  - Keyboard Navigation
-  - Screen Reader Test
-  - Kontrast-Check
+**Tasks:**
+- [ ] Mobile Testing (alle Breakpoints)
 - [ ] Cross-Browser Testing
-- [ ] Domain Setup (generation-ai.org -> Vercel)
-- [ ] Analytics Setup (optional)
-- [ ] Final Review & Launch
-
-**Success Criteria:**
-- Lighthouse Score > 90 (alle Kategorien)
-- WCAG 2.1 AA compliant
-- Domain live und erreichbar
-- Sign-up Flow funktioniert end-to-end
+- [ ] Performance Check (Lighthouse > 90)
+- [ ] SEO Basics (Meta Tags, OG Image)
+- [ ] Accessibility Check
+- [ ] Final Content Review
+- [ ] Launch 🚀
 
 ---
 
-## Dependencies & Blockers
+## Abhängigkeiten & Blocker
 
-| Dependency | Required for | Status |
-|------------|--------------|--------|
-| Circle API Token | Phase 4 | pending |
-| Domain DNS | Phase 5 | pending |
-| Design Assets (Logo, etc.) | Phase 1 | ready |
-| Supabase (existiert) | Phase 4 | ready |
+| Item | Required for | Status |
+|------|--------------|--------|
+| Circle API Token | Phase 3 | ⏳ pending |
+| Domain DNS | Phase 1 | ✅ done |
+| Supabase Projekt | Phase 3 | ✅ exists |
+| Content Texte | Phase 2 | ⏳ pending |
 
 ---
 
-## Key Decisions
+## Cross-Project Sync
 
-| Decision | Rationale |
-|----------|-----------|
-| "Soft SSO" statt echtes SSO | Circle Business hat kein Custom SSO, Enterprise zu teuer |
-| Circle sendet Magic Link | Zentrale Community-Erfahrung, tools-app ist Add-on |
-| Fragebogen auf Landing Page | Gatekeeping + Daten VOR Circle-Account |
-| 21st.dev Components | Moderne UI ohne alles selbst zu bauen |
+**Auth-Architektur:** `../Decisions/Auth-Architecture.md`
+- Website erstellt Supabase User + Circle Member
+- tools-app liest Supabase Session
+- Beide auf `*.generation-ai.org` für Cookie-Sharing
+
+**tools-app wartet auf:**
+- Supabase Auth Setup (von Website Phase 3)
+- Session-Check Middleware
 
 ---
 

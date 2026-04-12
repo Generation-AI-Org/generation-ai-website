@@ -4,65 +4,62 @@
 
 ## Current Status
 
-**Phase:** 1 → 2 Transition
-**Milestone:** v1.0 Launch
-**Last Updated:** 2026-04-12T22:30
+**Phase:** 2 — Landing Content
+**Milestone:** v1.0 Launch (Anfang Mai 2026)
+**Last Updated:** 2026-04-12T23:00
 
 ## Progress
 
 ```
-Phase 1: [#########] ✅ Complete (+ Bonus: Terminal Splash, SignalGrid)
-Phase 2: [#--------] In Progress (Hero done, Sections pending)
+Phase 1: [#########] ✅ Complete
+Phase 2: [         ] Ready to plan
+Phase 3: [         ] Pending (Sign-up + Auth)
+Phase 4: [         ] Pending (Polish)
 ```
 
 ## What's Done
 
 ### Phase 1: Project Setup ✅
-- [x] Next.js 16 + React 19 + Tailwind v4
-- [x] shadcn/ui Basis-Infrastruktur
-- [x] Generation AI Farbwelt (Dark: Blue/Neon, Light: Pink/Red)
-- [x] Header + Footer Komponenten
-- [x] GitHub Repo: luca-schweigmann/generation-ai-website
-- [x] Vercel Deploy: website-indol-eight-13.vercel.app
-- [x] Domain DNS konfiguriert: generation-ai.org
+- Next.js 16 + React 19 + Tailwind v4
+- Terminal Splash (Sound, Typing, schwebendes Logo)
+- Hero Section mit SignalGrid Background
+- Header + Footer (SVG Logos)
+- Vercel Deploy: website-indol-eight-13.vercel.app
+- Domain DNS: generation-ai.org → Vercel
 
-### Bonus (nicht geplant, aber gebaut):
-- [x] **Terminal Splash** — Typing Animation, Sound Effects (Web Audio API), schwebendes Logo
-- [x] **SignalGrid Background** — Canvas-basierter interaktiver Hintergrund mit Mouse-Tracking
-- [x] **Hero Section** — Badge, Headline, CTAs, Social Proof Platzhalter
+### Quick Fixes (heute)
+- Hero CTAs verlinkt ("Beitreten" → #signup, "Mehr erfahren" → #features)
+- Header Logo auf SVG umgestellt
 
-### Phase 2: Landing Page (in progress)
-- [x] Hero Section (mit SignalGrid)
-- [ ] Buttons verlinken (CTAs gehen ins Leere)
-- [ ] Logo angleichen (Header: JPG, Footer: SVG)
-- [ ] "Was wir bieten" Section
-- [ ] "Für wen" Section
-- [ ] CTA Section
-- [ ] Mobile Responsive Check
+## Next Up
 
-## Key Decisions Made
+**Phase 2: Landing Content**
+- "Was wir bieten" Section (Tools, Community, Kurse, Events)
+- "Für wen" Section (Studierende DACH)
 
-1. **Terminal Splash:** Aceternity-Style Audio Sprites, skipIfSeen für Returning Users
-2. **Background:** SignalGrid statt statischem Gradient — organisches, interaktives Gefühl
-3. **Design System:** CSS Variables für Theme-Switching, @layer utilities für Tailwind v4
-4. **Auth-Architektur:** "Soft SSO" — Supabase Auth + Circle API
-5. **Flow:** Landing Page → Fragebogen → Circle Magic Link → Community
+**Phase 3: Sign-up Flow**
+- Fragebogen UI (Studiengang, Hochschule, KI-Level 1-5, Interessen)
+- Auth Backend (Supabase + Circle)
 
-## Open Items
+## Key Decisions
 
-- [ ] Logo im Header auf SVG umstellen (wie Footer)
-- [ ] Hero CTAs verlinken (Beitreten → Circle, Mehr erfahren → Scroll)
-- [ ] Social Proof: Echte Avatare oder entfernen
-- [ ] Circle API Token erstellen (für Phase 4)
+1. **"Test Yourself" Level 1-5** im Fragebogen für KI-Erfahrung
+2. **Sign-up Section auf Landing Page** statt separate Seite
+3. **Soft SSO:** Supabase Auth + Circle API (siehe `../Decisions/Auth-Architecture.md`)
+4. **Launch Anfang Mai:** MVP = Website + tools-app + aktive Circle Community
 
-## Next Steps
+## Blocker
 
-1. Quick Fixes: Logo + Buttons
-2. `/gsd-plan-phase 2` — Landing Page Sections planen
-3. Sections bauen: Features, Für wen, CTA
+- [ ] Circle API Token erstellen
+- [ ] Content-Texte für Sections
+
+## Cross-Project
+
+- **tools-app:** Baut Agent, wartet auf Auth
+- **Auth-Architektur:** `../Decisions/Auth-Architecture.md`
 
 ## Context für neue Sessions
 
-Website für Generation AI (Student KI Community). Tech: Next.js 16, Tailwind v4, Vercel.
-Besonderheit: Terminal Splash Intro + interaktiver SignalGrid Background.
-Ziel: Leute zur Circle Community (community.generation-ai.org) bringen.
+Website für Generation AI (Student KI Community DACH). 
+Launch Anfang Mai. MVP: Landing Page mit Sign-up Flow der Supabase User + Circle Member erstellt.
+Besonderheit: Terminal Splash + SignalGrid Background.
