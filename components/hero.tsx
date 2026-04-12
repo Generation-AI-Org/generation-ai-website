@@ -11,7 +11,6 @@ export function Hero() {
           gridSpacing={30}
           dotSize={1.5}
           dotOpacity={0.35}
-          signalHops={2}
         />
         {/* Fade overlay - less visible in center where text is */}
         <div
