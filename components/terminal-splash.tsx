@@ -59,7 +59,6 @@ const COMMANDS = [
       '✓ Loading community modules',
       '✓ Community initialized',
     ],
-    delayAfter: 1500, // Longer pause before next command
   },
   {
     text: 'connect --students',
@@ -67,6 +66,7 @@ const COMMANDS = [
       '✓ Found 100+ students in DACH',
       '✓ Connection ready',
     ],
+    delayBeforeTyping: 1500, // Pause after prompt appears, before typing starts
   },
 ]
 
@@ -155,7 +155,7 @@ export function TerminalSplash({
   const [currentCommandIndex, setCurrentCommandIndex] = useState(0)
   const [typedText, setTypedText] = useState('')
   const [visibleOutputs, setVisibleOutputs] = useState<number>(0)
-  const [phase, setPhase] = useState<'start' | 'typing' | 'output' | 'waiting' | 'launching'>('start')
+  const [phase, setPhase] = useState<'start' | 'typing' | 'output' | 'prompt' | 'waiting' | 'launching'>('start')
   const [isExiting, setIsExiting] = useState(false)
   const [history, setHistory] = useState<Array<{ command: string; outputs: string[] }>>([])
   const [cursorVisible, setCursorVisible] = useState(true)
@@ -210,22 +210,37 @@ export function TerminalSplash({
       }, OUTPUT_DELAY)
       return () => clearTimeout(timeout)
     } else {
-      // Use custom delay if specified, otherwise default
-      const delay = currentCommand.delayAfter ?? COMMAND_DELAY
       const timeout = setTimeout(() => {
         setHistory(h => [...h, { command: currentCommand.text, outputs: currentCommand.outputs }])
         if (currentCommandIndex < COMMANDS.length - 1) {
           setCurrentCommandIndex(i => i + 1)
           setTypedText('')
           setVisibleOutputs(0)
-          setPhase('typing')
+          // Check if next command has a delay before typing
+          const nextCommand = COMMANDS[currentCommandIndex + 1]
+          if (nextCommand?.delayBeforeTyping) {
+            setPhase('prompt') // Show prompt, wait, then type
+          } else {
+            setPhase('typing')
+          }
         } else {
           setPhase('waiting')
         }
-      }, delay)
+      }, COMMAND_DELAY)
       return () => clearTimeout(timeout)
     }
   }, [mounted, shouldSkip, phase, visibleOutputs, currentCommand, currentCommandIndex])
+
+  // Prompt delay - wait after prompt appears before typing
+  useEffect(() => {
+    if (!mounted || shouldSkip || phase !== 'prompt' || !currentCommand) return
+
+    const delay = currentCommand.delayBeforeTyping ?? COMMAND_DELAY
+    const timeout = setTimeout(() => {
+      setPhase('typing')
+    }, delay)
+    return () => clearTimeout(timeout)
+  }, [mounted, shouldSkip, phase, currentCommand])
 
   // Handle keyboard
   useEffect(() => {
