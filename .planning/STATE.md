@@ -5,7 +5,7 @@
 ## Current Status
 
 **Phase:** 4 (In Progress)
-**Current Plan:** 04-01 + 04-02 complete (Wave 1), 04-03 + 04-04 next (Wave 2)
+**Current Plan:** 04-01, 04-02, 04-03 complete, 04-04 next (Wave 2)
 **Milestone:** v1.0 Launch (Anfang Mai 2026)
 **Last Updated:** 2026-04-13T09:22
 
@@ -15,7 +15,7 @@
 Phase 1: [#########] ✅ Complete
 Phase 2: [#########] ✅ Complete
 Phase 3: [#########] ✅ Complete
-Phase 4: [###------] 🔄 In Progress (2/5 plans, Wave 1 complete)
+Phase 4: [#####----] 🔄 In Progress (3/5 plans, Wave 2 in progress)
 ```
 
 ## Next Action
@@ -57,13 +57,13 @@ Phase 4 Plans:
 ### Phase 4: Polish & Launch (In Progress)
 - ✅ 04-01: SEO Meta Tags & Schema.org
 - ✅ 04-02: OG Image Generation
-- 📋 04-03: Accessibility Audit (Wave 2)
+- ✅ 04-03: Accessibility (A11y)
 - 📋 04-04: Performance Optimization (Wave 2)
 - 📋 04-05: Cross-Browser Testing (Wave 3)
 
 ## Next Up
 
-**Wave 2:** A11y + Performance (parallel)
+**Wave 2:** Performance Optimization (04-04)
 **Wave 3:** Cross-Browser Testing (checkpoint)
 
 ## Key Decisions
