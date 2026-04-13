@@ -6,16 +6,16 @@
 
 | Phase | Name | Goal | Status |
 |-------|------|------|--------|
-| 1 | Project Setup | Next.js + Design System + Deploy | ✅ done |
-| 2 | Landing Content | "Was wir bieten" + "Für wen" Sections | ✅ done |
-| 3 | Sign-up Flow | Fragebogen + Auth (Supabase + Circle) | 🟡 DNS pending |
-| 4 | Polish & Launch | Mobile, Performance, Final QA | 🔜 ready |
+| 1 | Project Setup | Next.js + Design System + Deploy | done |
+| 2 | Landing Content | "Was wir bieten" + "Für wen" Sections | done |
+| 3 | Sign-up Flow | Fragebogen + Auth (Supabase + Circle) | DNS pending |
+| 4 | Polish & Launch | SEO, Performance, Accessibility, Final QA | planning |
 
 **Timeline:** ~2-3 Wochen bis Launch
 
 ---
 
-## Phase 1: Project Setup ✅
+## Phase 1: Project Setup
 
 **Status:** Done
 
@@ -50,10 +50,10 @@
 - Evtl. 2-3 Use Cases / Personas
 
 **Deliverables:**
-- [ ] Features Section Component
-- [ ] "Für wen" Section Component
-- [ ] Mobile Responsive
-- [ ] Scroll-Anchor für "Mehr erfahren" Button
+- [x] Features Section Component
+- [x] "Für wen" Section Component
+- [x] Mobile Responsive
+- [x] Scroll-Anchor für "Mehr erfahren" Button
 
 ---
 
@@ -62,37 +62,25 @@
 **Goal:** Funktionierender Fragebogen mit Auth-Integration.
 
 **UI Components:**
-- [ ] Sign-up Section Layout
-- [ ] Fragebogen UI:
+- [x] Sign-up Section Layout
+- [x] Fragebogen UI:
   - Was studierst du? (Dropdown/Chips)
   - Welche Hochschule? (Dropdown mit Suche)
   - **"Test Yourself" KI-Level 1-5** (Slider oder Chips)
   - Interessen (Multi-Select Chips)
-- [ ] Email Input + Submit Button
-- [ ] Loading State
-- [ ] Success State ("Check deine Emails")
-- [ ] Error Handling
+- [x] Email Input + Submit Button
+- [x] Loading State
+- [x] Success State ("Check deine Emails")
+- [x] Error Handling
 
 **Backend:**
-- [ ] Supabase `profiles` Tabelle erstellen (Schema siehe Auth-Architecture.md)
-- [ ] Supabase Client mit Cookie-Domain `.generation-ai.org` konfigurieren
-- [ ] API Route `/api/auth/signup`:
-  - Supabase User erstellen (Magic Link)
-  - Profil + Fragebogen-Antworten speichern
-  - Circle Member via Admin API erstellen
-- [ ] Circle API Integration
-- [ ] RLS Policies für profiles Tabelle
+- [x] Supabase `profiles` Tabelle erstellen
+- [x] Supabase Client konfiguriert
+- [x] API Route `/api/auth/signup`
+- [x] Circle API Integration
+- [x] RLS Policies für profiles Tabelle
 
-**Koordination mit tools-app:**
-- tools-app Phase 4 (Auth Layer) ist FERTIG
-- tools-app liest Sessions die wir erstellen
-- Gleiche Supabase-Instanz, gleiche Cookie-Domain
-- Siehe: `../Decisions/Auth-Architecture.md`
-
-**Abhängigkeiten:**
-- [ ] Circle API Token (Admin API) — Luca muss erstellen
-- [x] Supabase Projekt (existiert)
-- [x] Domain DNS konfiguriert
+**Status:** DNS pending
 
 ---
 
@@ -100,14 +88,20 @@
 
 **Goal:** Production-ready, getestet, live.
 
-**Tasks:**
-- [ ] Mobile Testing (alle Breakpoints)
-- [ ] Cross-Browser Testing
-- [ ] Performance Check (Lighthouse > 90)
-- [ ] SEO Basics (Meta Tags, OG Image)
-- [ ] Accessibility Check
-- [ ] Final Content Review
-- [ ] Launch 🚀
+**Plans:** 5 plans
+
+Plans:
+- [ ] 04-01-PLAN.md — SEO Metadata Setup (meta tags, robots, sitemap, schema.org)
+- [ ] 04-02-PLAN.md — OG Image Creation (branded social sharing image)
+- [ ] 04-03-PLAN.md — Accessibility Improvements (keyboard nav, focus states, ARIA)
+- [ ] 04-04-PLAN.md — Performance Optimization (images, bundle, Lighthouse)
+- [ ] 04-05-PLAN.md — Cross-Browser & Device Testing (final QA checkpoint)
+
+**Requirements:**
+- D-01 to D-07: SEO (Meta, OG, Twitter, Schema.org)
+- D-08 to D-11: Performance (Core Web Vitals, Images, Bundle)
+- D-12 to D-15: Accessibility (Keyboard, Screen Reader, Contrast, Focus)
+- D-16 to D-18: Testing (Desktop/Mobile browsers, Breakpoints)
 
 ---
 
@@ -115,10 +109,11 @@
 
 | Item | Required for | Status |
 |------|--------------|--------|
-| Circle API Token | Phase 3 | ⏳ pending |
-| Domain DNS | Phase 1 | ✅ done |
-| Supabase Projekt | Phase 3 | ✅ exists |
-| Content Texte | Phase 2 | ⏳ pending |
+| Circle API Token | Phase 3 | done |
+| Domain DNS | Phase 1 | done |
+| Supabase Projekt | Phase 3 | done |
+| Content Texte | Phase 2 | done |
+| DNS Migration | Phase 3 | pending |
 
 ---
 
@@ -135,4 +130,4 @@
 
 ---
 
-*Last updated: 2026-04-12*
+*Last updated: 2026-04-13*
