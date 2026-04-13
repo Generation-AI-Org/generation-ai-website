@@ -58,14 +58,15 @@ const COMMANDS = [
     outputs: [
       '✓ Loading community modules',
       '✓ Community initialized',
-    ]
+    ],
+    delayAfter: 1500, // Longer pause before next command
   },
   {
     text: 'connect --students',
     outputs: [
       '✓ Found 100+ students in DACH',
       '✓ Connection ready',
-    ]
+    ],
   },
 ]
 
@@ -209,6 +210,8 @@ export function TerminalSplash({
       }, OUTPUT_DELAY)
       return () => clearTimeout(timeout)
     } else {
+      // Use custom delay if specified, otherwise default
+      const delay = currentCommand.delayAfter ?? COMMAND_DELAY
       const timeout = setTimeout(() => {
         setHistory(h => [...h, { command: currentCommand.text, outputs: currentCommand.outputs }])
         if (currentCommandIndex < COMMANDS.length - 1) {
@@ -219,7 +222,7 @@ export function TerminalSplash({
         } else {
           setPhase('waiting')
         }
-      }, COMMAND_DELAY)
+      }, delay)
       return () => clearTimeout(timeout)
     }
   }, [mounted, shouldSkip, phase, visibleOutputs, currentCommand, currentCommandIndex])
