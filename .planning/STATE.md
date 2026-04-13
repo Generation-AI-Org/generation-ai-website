@@ -4,10 +4,9 @@
 
 ## Current Status
 
-**Phase:** 4 (In Progress)
-**Current Plan:** 04-01 to 04-04 complete, 04-05 next (Wave 3)
+**Phase:** 4 ✅ Complete (Manual QA Pending)
 **Milestone:** v1.0 Launch (Anfang Mai 2026)
-**Last Updated:** 2026-04-13T09:28
+**Last Updated:** 2026-04-13T09:40
 
 ## Progress
 
@@ -15,17 +14,19 @@
 Phase 1: [#########] ✅ Complete
 Phase 2: [#########] ✅ Complete
 Phase 3: [#########] ✅ Complete
-Phase 4: [#######--] 🔄 In Progress (4/5 plans, Wave 2 complete)
+Phase 4: [#########] ✅ Complete (Manual QA pending)
 ```
 
 ## Next Action
 
-`/gsd-execute-phase 4`
+**Manual QA on https://generation-ai.org**
 
-Phase 4 Plans:
-- Wave 1: SEO + OG Image (parallel)
-- Wave 2: A11y + Performance (parallel)  
-- Wave 3: Cross-Browser Testing (checkpoint)
+- [ ] Test in Chrome, Firefox, Safari (Desktop)
+- [ ] Test on real mobile device
+- [ ] Verify sign-up flow E2E
+- [ ] Final Lighthouse on production
+
+Then: `git push` → Deploy → Launch 🚀
 
 ## What's Done
 
@@ -54,16 +55,21 @@ Phase 4 Plans:
 - ✅ Supabase Site URL → generation-ai.org
 - ✅ E2E Test bestanden (Signup → Email → Magic Link)
 
-### Phase 4: Polish & Launch (In Progress)
+### Phase 4: Polish & Launch ✅
 - ✅ 04-01: SEO Meta Tags & Schema.org
 - ✅ 04-02: OG Image Generation
 - ✅ 04-03: Accessibility (A11y)
-- ✅ 04-04: Performance Optimization (Wave 2)
-- 📋 04-05: Cross-Browser Testing (Wave 3)
+- ✅ 04-04: Performance Optimization (Score 46→67)
+- ✅ 04-05: Cross-Browser Testing (Screenshots captured)
+
+**Performance Hotfix:**
+- Logo: 6.9MB → 43KB
+- SignalGrid: 60fps → 30fps
+- LCP: 18s → 3.4s
 
 ## Next Up
 
-**Wave 3:** Cross-Browser Testing (04-05, checkpoint)
+**Launch Readiness:** Manual QA, then deploy
 
 ## Key Decisions
 
