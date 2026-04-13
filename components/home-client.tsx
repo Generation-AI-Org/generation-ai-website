@@ -6,6 +6,7 @@ import { Footer } from "@/components/layout/footer"
 import { Hero } from "@/components/hero"
 import { Features } from "@/components/sections/features"
 import { TargetAudience } from "@/components/sections/target-audience"
+import { Signup } from "@/components/sections/signup"
 import { TerminalSplash } from "@/components/terminal-splash"
 
 export function HomeClient() {
@@ -36,6 +37,7 @@ export function HomeClient() {
           <Hero />
           <Features />
           <TargetAudience />
+          <Signup />
         </main>
         <Footer />
       </div>

@@ -48,9 +48,7 @@ export function Hero() {
         {/* CTAs */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <a
-            href="https://community.generation-ai.org"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#signup"
             className="group relative px-8 py-4 bg-accent text-text-on-accent rounded-full font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_var(--accent-glow)]"
           >
             <span className="relative z-10">Kostenlos beitreten</span>
