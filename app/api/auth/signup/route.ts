@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createAdminClient } from '@/lib/supabase/server'
+import { sendMagicLinkEmail } from '@/lib/email'
 
 const CIRCLE_API_TOKEN = process.env.CIRCLE_API_TOKEN!
 const CIRCLE_COMMUNITY_URL = process.env.CIRCLE_COMMUNITY_URL!
@@ -37,10 +38,10 @@ export async function POST(request: NextRequest) {
 
     const supabase = createAdminClient()
 
-    // 1. Create Supabase user with magic link
+    // 1. Create Supabase user
     const { data: authData, error: authError } = await supabase.auth.admin.createUser({
       email,
-      email_confirm: false, // Will send confirmation email
+      email_confirm: false,
       user_metadata: {
         full_name: name,
       },
@@ -62,6 +63,30 @@ export async function POST(request: NextRequest) {
     }
 
     const userId = authData.user.id
+
+    // 1b. Generate magic link and send via Resend
+    const { data: linkData, error: linkError } = await supabase.auth.admin.generateLink({
+      type: 'magiclink',
+      email,
+      options: {
+        redirectTo: 'https://generation-ai.org',
+      },
+    })
+
+    if (linkError) {
+      console.error('Magic link generation error:', linkError)
+    } else if (linkData?.properties?.action_link) {
+      try {
+        await sendMagicLinkEmail({
+          email,
+          name,
+          magicLink: linkData.properties.action_link,
+        })
+      } catch (emailError) {
+        console.error('Email send error:', emailError)
+        // Don't fail signup, user was created - they can request a new link
+      }
+    }
 
     // 2. Create profile in Supabase
     const { error: profileError } = await supabase.from('profiles').insert({
