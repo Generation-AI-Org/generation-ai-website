@@ -203,6 +203,7 @@ export function Signup() {
                 onChange={(e) => setStudyField(e.target.value)}
                 className="w-full px-4 py-3 rounded-xl bg-bg-card border border-border text-text focus:outline-none focus:border-accent transition-colors appearance-none cursor-pointer"
                 required
+                aria-required="true"
               >
                 <option value="">Wähle deine Richtung</option>
                 {studyFields.map((field) => (
@@ -261,8 +262,12 @@ export function Signup() {
 
           {/* Error Message */}
           {formState === 'error' && (
-            <div className="flex items-center gap-3 p-4 rounded-xl bg-red-500/10 border border-red-500/20 text-red-400">
-              <AlertCircle className="w-5 h-5 shrink-0" />
+            <div
+              className="flex items-center gap-3 p-4 rounded-xl bg-red-500/10 border border-red-500/20 text-red-400"
+              role="alert"
+              aria-live="polite"
+            >
+              <AlertCircle className="w-5 h-5 shrink-0" aria-hidden="true" />
               <p className="text-sm">{errorMessage}</p>
             </div>
           )}
