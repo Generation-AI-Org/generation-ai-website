@@ -36,6 +36,9 @@ export function SignalGrid({
   const mouseRef = useRef({ x: -1000, y: -1000 })
   const lastMouseCell = useRef({ col: -1, row: -1 })
   const animationRef = useRef<number | undefined>(undefined)
+  const lastFrameTimeRef = useRef<number>(0)
+  const TARGET_FPS = 30
+  const FRAME_INTERVAL = 1000 / TARGET_FPS
 
   const initGrid = useCallback((width: number, height: number) => {
     const cols = Math.ceil(width / gridSpacing) + 1
@@ -67,9 +70,17 @@ export function SignalGrid({
     pointsRef.current = grid
   }, [gridSpacing])
 
-  const draw = useCallback(() => {
+  const draw = useCallback((timestamp: number) => {
     const canvas = canvasRef.current
     if (!canvas) return
+
+    // Throttle to TARGET_FPS
+    const elapsed = timestamp - lastFrameTimeRef.current
+    if (elapsed < FRAME_INTERVAL) {
+      animationRef.current = requestAnimationFrame(draw)
+      return
+    }
+    lastFrameTimeRef.current = timestamp - (elapsed % FRAME_INTERVAL)
 
     const ctx = canvas.getContext('2d')
     if (!ctx) return
