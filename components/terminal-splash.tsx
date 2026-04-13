@@ -434,6 +434,16 @@ export function TerminalSplash({
               </div>
             )}
 
+            {/* Prompt waiting phase - cursor blinks before typing starts */}
+            {phase === 'prompt' && currentCommand && (
+              <div className="flex items-center gap-2">
+                <Prompt />
+                <span className="ml-2">
+                  <Cursor />
+                </span>
+              </div>
+            )}
+
             {/* Current command being typed */}
             {phase === 'typing' && currentCommand && (
               <div className="flex items-center gap-2">
