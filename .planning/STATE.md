@@ -5,9 +5,9 @@
 ## Current Status
 
 **Phase:** 4 (In Progress)
-**Current Plan:** 04-02 complete, 04-03 next
+**Current Plan:** 04-01 + 04-02 complete (Wave 1), 04-03 + 04-04 next (Wave 2)
 **Milestone:** v1.0 Launch (Anfang Mai 2026)
-**Last Updated:** 2026-04-13T09:21
+**Last Updated:** 2026-04-13T09:22
 
 ## Progress
 
@@ -15,7 +15,7 @@
 Phase 1: [#########] ✅ Complete
 Phase 2: [#########] ✅ Complete
 Phase 3: [#########] ✅ Complete
-Phase 4: [#--------] 📋 Planned (5 plans, 3 waves)
+Phase 4: [###------] 🔄 In Progress (2/5 plans, Wave 1 complete)
 ```
 
 ## Next Action
@@ -54,15 +54,17 @@ Phase 4 Plans:
 - ✅ Supabase Site URL → generation-ai.org
 - ✅ E2E Test bestanden (Signup → Email → Magic Link)
 
+### Phase 4: Polish & Launch (In Progress)
+- ✅ 04-01: SEO Meta Tags & Schema.org
+- ✅ 04-02: OG Image Generation
+- 📋 04-03: Accessibility Audit (Wave 2)
+- 📋 04-04: Performance Optimization (Wave 2)
+- 📋 04-05: Cross-Browser Testing (Wave 3)
+
 ## Next Up
 
-**Phase 4: Polish & Launch**
-- Mobile Testing
-- Performance (Lighthouse > 90)
-- SEO (Meta Tags, OG Image)
-- Accessibility
-- Final QA
-- Launch 🚀
+**Wave 2:** A11y + Performance (parallel)
+**Wave 3:** Cross-Browser Testing (checkpoint)
 
 ## Key Decisions
 
