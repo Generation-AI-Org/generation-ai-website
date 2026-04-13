@@ -19,7 +19,7 @@ export function Header() {
           {/* Logo - switches based on theme */}
           <Link href="/" className="flex items-center" aria-label="Generation AI - Startseite">
             <Image
-              src="/logos/generationai-blau-neon-wide.svg"
+              src="/logos/generationai-blau-neon.jpg"
               alt="Generation AI"
               width={150}
               height={40}

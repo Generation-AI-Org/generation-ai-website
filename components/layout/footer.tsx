@@ -14,7 +14,7 @@ export function Footer() {
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image
-              src="/logos/generationai-blau-neon-wide.svg"
+              src="/logos/generationai-blau-neon.jpg"
               alt="Generation AI"
               width={140}
               height={28}
