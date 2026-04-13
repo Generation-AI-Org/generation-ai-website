@@ -4,16 +4,17 @@
 
 ## Current Status
 
-**Phase:** 4 (Planned, ready to execute)
+**Phase:** 4 (In Progress)
+**Current Plan:** 04-02 complete, 04-03 next
 **Milestone:** v1.0 Launch (Anfang Mai 2026)
-**Last Updated:** 2026-04-13T08:15
+**Last Updated:** 2026-04-13T09:21
 
 ## Progress
 
 ```
 Phase 1: [#########] ✅ Complete
 Phase 2: [#########] ✅ Complete
-Phase 3: [########-] 🟡 Fast fertig (DNS pending)
+Phase 3: [#########] ✅ Complete
 Phase 4: [#--------] 📋 Planned (5 plans, 3 waves)
 ```
 
@@ -42,40 +43,16 @@ Phase 4 Plans:
 - Responsive Grid Layouts
 - #features Scroll-Anchor funktioniert
 
-### Phase 3: Sign-up Flow 🟡
-**Code komplett, wartet auf DNS-Propagation**
-
+### Phase 3: Sign-up Flow ✅
 - ✅ Sign-up Section UI mit Fragebogen
-  - Name, Email
-  - Hochschule (Dropdown)
-  - Studienrichtung (Dropdown)
-  - KI-Level 1-5 (Button Grid)
-  - Interessen (Multi-Select Chips)
 - ✅ API Route `/api/auth/signup`
-- ✅ Supabase Integration
-  - Admin Client für User-Erstellung
-  - `profiles` Tabelle mit RLS
-  - Magic Link Generation
+- ✅ Supabase Integration (Admin Client, profiles, Magic Link)
 - ✅ Circle API v2 Integration
-  - Member erstellen bei Signup
-  - circle_member_id in Profile speichern
-- ✅ Resend Email Service
-  - Branded HTML Template
-  - Magic Link Email
-- ✅ Hero CTA → #signup Scroll
-- ⏳ **DNS Migration Strato → Vercel**
-  - Nameserver umgestellt
-  - Alle Records in Vercel angelegt
-  - Wartet auf Propagation (~30-60 Min)
-- ⏳ **Resend Domain-Verifizierung**
-  - generation-ai.org (EU Region)
-  - DKIM, SPF, MX Records konfiguriert
-  - Wird grün sobald DNS propagiert
-
-**Zum Abschließen:**
-1. DNS propagiert checken: `dig NS generation-ai.org`
-2. Resend Domain verifizieren
-3. End-to-End Test (Signup → Email → Login)
+- ✅ Resend Email Service (Branded Template)
+- ✅ DNS Migration Strato → Vercel (ns1/ns2.vercel-dns.com)
+- ✅ Resend Domain verified (eu-west-1)
+- ✅ Supabase Site URL → generation-ai.org
+- ✅ E2E Test bestanden (Signup → Email → Magic Link)
 
 ## Next Up
 
