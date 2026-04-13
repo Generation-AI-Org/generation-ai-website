@@ -289,7 +289,10 @@ export function Signup() {
           </button>
 
           <p className="text-center text-text-muted text-sm">
-            Mit der Anmeldung akzeptierst du unsere Nutzungsbedingungen.
+            Mit der Anmeldung akzeptierst du unsere{' '}
+            <a href="/datenschutz" className="text-accent hover:underline">
+              Datenschutzerklärung
+            </a>.
           </p>
         </form>
       </div>

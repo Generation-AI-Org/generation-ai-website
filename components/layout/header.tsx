@@ -52,9 +52,9 @@ export function Header() {
             </button>
 
             {/* CTA */}
-            <span className="bg-accent text-text-on-accent px-4 py-2 rounded-full text-sm font-medium cursor-pointer hover:opacity-90 transition-opacity">
+            <a href="#signup" className="bg-accent text-text-on-accent px-4 py-2 rounded-full text-sm font-medium hover:opacity-90 transition-opacity">
               Beitreten
-            </span>
+            </a>
           </div>
         </div>
       </nav>

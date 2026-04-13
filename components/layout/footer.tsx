@@ -1,11 +1,7 @@
-'use client'
-
 import Image from "next/image";
 import Link from "next/link";
-import { useTheme } from "@/components/ThemeProvider";
 
 export function Footer() {
-  const { theme } = useTheme();
 
   return (
     <footer className="bg-bg-header border-t border-white/10 py-12">
@@ -22,9 +18,17 @@ export function Footer() {
             />
           </Link>
 
-          {/* Placeholder Links - Phase 2 */}
+          {/* Legal Links */}
           <nav className="flex items-center gap-6">
-            <span className="text-text-muted text-sm">Links folgen in Phase 2</span>
+            <Link href="/impressum" className="text-text-muted text-sm hover:text-text transition-colors">
+              Impressum
+            </Link>
+            <Link href="/datenschutz" className="text-text-muted text-sm hover:text-text transition-colors">
+              Datenschutz
+            </Link>
+            <a href="mailto:kontakt@generation-ai.org" className="text-text-muted text-sm hover:text-text transition-colors">
+              Kontakt
+            </a>
           </nav>
 
           {/* Copyright */}
