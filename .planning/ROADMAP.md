@@ -7,9 +7,9 @@
 | Phase | Name | Goal | Status |
 |-------|------|------|--------|
 | 1 | Project Setup | Next.js + Design System + Deploy | ✅ done |
-| 2 | Landing Content | "Was wir bieten" + "Für wen" Sections | pending |
-| 3 | Sign-up Flow | Fragebogen + Auth (Supabase + Circle) | pending |
-| 4 | Polish & Launch | Mobile, Performance, Final QA | pending |
+| 2 | Landing Content | "Was wir bieten" + "Für wen" Sections | ✅ done |
+| 3 | Sign-up Flow | Fragebogen + Auth (Supabase + Circle) | 🟡 DNS pending |
+| 4 | Polish & Launch | Mobile, Performance, Final QA | 🔜 ready |
 
 **Timeline:** ~2-3 Wochen bis Launch
 
