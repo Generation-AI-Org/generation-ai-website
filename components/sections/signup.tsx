@@ -138,7 +138,7 @@ export function Signup() {
         </div>
 
         {/* Form */}
-        <form onSubmit={handleSubmit} className="space-y-8">
+        <form onSubmit={handleSubmit} className="space-y-8" aria-label="Anmeldung zur Community">
           {/* Name & Email */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
@@ -153,6 +153,7 @@ export function Signup() {
                 placeholder="Dein Name"
                 className="w-full px-4 py-3 rounded-xl bg-bg-card border border-border text-text placeholder:text-text-muted focus:outline-none focus:border-accent transition-colors"
                 required
+                aria-required="true"
               />
             </div>
             <div>
@@ -167,6 +168,7 @@ export function Signup() {
                 placeholder="deine@email.de"
                 className="w-full px-4 py-3 rounded-xl bg-bg-card border border-border text-text placeholder:text-text-muted focus:outline-none focus:border-accent transition-colors"
                 required
+                aria-required="true"
               />
             </div>
           </div>
@@ -183,6 +185,7 @@ export function Signup() {
                 onChange={(e) => setUniversity(e.target.value)}
                 className="w-full px-4 py-3 rounded-xl bg-bg-card border border-border text-text focus:outline-none focus:border-accent transition-colors appearance-none cursor-pointer"
                 required
+                aria-required="true"
               >
                 <option value="">Wähle deine Hochschule</option>
                 {universities.map((uni) => (

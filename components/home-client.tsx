@@ -33,7 +33,7 @@ export function HomeClient() {
         }`}
       >
         <Header />
-        <main className="min-h-screen pt-16">
+        <main id="main-content" className="min-h-screen pt-16">
           <Hero />
           <Features />
           <TargetAudience />
