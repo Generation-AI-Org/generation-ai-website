@@ -9,10 +9,15 @@ export function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-bg-header border-b border-white/10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Skip to content link - first focusable element */}
+      <a href="#main-content" className="skip-link">
+        Zum Inhalt springen
+      </a>
+
+      <nav aria-label="Hauptnavigation" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo - switches based on theme */}
-          <Link href="/" className="flex items-center">
+          <Link href="/" className="flex items-center" aria-label="Generation AI - Startseite">
             <Image
               src={theme === 'dark'
                 ? '/logos/generationai-weiss-transparent-wide.svg'
@@ -56,7 +61,7 @@ export function Header() {
             </span>
           </div>
         </div>
-      </div>
+      </nav>
     </header>
   );
 }
