@@ -45,7 +45,7 @@ export default function Impressum() {
           <section>
             <h2 className="text-xl font-semibold text-text mb-4">Kontakt</h2>
             <p className="text-text-secondary">
-              E-Mail: kontakt@generation-ai.org
+              E-Mail: info@generation-ai.org
             </p>
           </section>
 

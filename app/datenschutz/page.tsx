@@ -40,7 +40,7 @@ export default function Datenschutz() {
               Generation AI<br />
               [Adresse wird ergänzt]<br />
               [PLZ Ort]<br /><br />
-              E-Mail: kontakt@generation-ai.org
+              E-Mail: info@generation-ai.org
             </p>
             <p className="text-text-secondary mt-4">
               Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder
@@ -134,7 +134,7 @@ export default function Datenschutz() {
               <li>Ihre Daten in einem übertragbaren Format zu erhalten</li>
             </ul>
             <p className="text-text-secondary mt-4">
-              Bei Fragen zum Datenschutz kontaktieren Sie uns unter: kontakt@generation-ai.org
+              Bei Fragen zum Datenschutz kontaktieren Sie uns unter: info@generation-ai.org
             </p>
           </section>
 

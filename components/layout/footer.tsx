@@ -26,7 +26,7 @@ export function Footer() {
             <Link href="/datenschutz" className="text-text-muted text-sm hover:text-text transition-colors">
               Datenschutz
             </Link>
-            <a href="mailto:kontakt@generation-ai.org" className="text-text-muted text-sm hover:text-text transition-colors">
+            <a href="mailto:info@generation-ai.org" className="text-text-muted text-sm hover:text-text transition-colors">
               Kontakt
             </a>
           </nav>
