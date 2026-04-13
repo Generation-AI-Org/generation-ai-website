@@ -26,19 +26,17 @@ export default function Impressum() {
           <section>
             <h2 className="text-xl font-semibold text-text mb-4">Angaben gemäß § 5 TMG</h2>
             <p className="text-text-secondary">
-              {/* TODO: Vereinsname eintragen */}
-              Generation AI<br />
-              {/* TODO: Adresse eintragen */}
-              [Adresse wird ergänzt]<br />
-              [PLZ Ort]
+              Generation AI e.V. (i.Gr.)<br />
+              Feuerbachstraße 26<br />
+              71254 Ditzingen
             </p>
           </section>
 
           <section>
             <h2 className="text-xl font-semibold text-text mb-4">Vertreten durch</h2>
             <p className="text-text-secondary">
-              {/* TODO: Vertretungsberechtigte Person eintragen */}
-              [Name, Funktion]
+              Janna Schweigmann (Vorsitzende)<br />
+              Simon Vetter (Vorsitzender)
             </p>
           </section>
 
@@ -52,9 +50,9 @@ export default function Impressum() {
           <section>
             <h2 className="text-xl font-semibold text-text mb-4">Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
             <p className="text-text-secondary">
-              {/* TODO: Verantwortliche Person eintragen */}
-              [Name]<br />
-              [Adresse]
+              Janna Schweigmann<br />
+              Feuerbachstraße 26<br />
+              71254 Ditzingen
             </p>
           </section>
 

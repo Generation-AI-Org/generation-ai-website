@@ -36,10 +36,9 @@ export default function Datenschutz() {
           <section>
             <h2 className="text-xl font-semibold text-text mb-4">2. Verantwortliche Stelle</h2>
             <p className="text-text-secondary">
-              {/* TODO: Vereinsdaten eintragen */}
-              Generation AI<br />
-              [Adresse wird ergänzt]<br />
-              [PLZ Ort]<br /><br />
+              Generation AI e.V. (i.Gr.)<br />
+              Feuerbachstraße 26<br />
+              71254 Ditzingen<br /><br />
               E-Mail: info@generation-ai.org
             </p>
             <p className="text-text-secondary mt-4">
